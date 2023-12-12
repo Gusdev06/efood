@@ -1,5 +1,4 @@
 import estrela from "../../../assets/estrela.svg";
-import { Buttons } from "../../../components/buttons";
 import { Tag } from "../tags";
 import * as S from "./styles";
 
@@ -35,9 +34,9 @@ const Restaurantes = ({
           </S.Avaliation>
         </S.DivTittle>
         <S.Description>{description}</S.Description>
-        <Buttons type="link" title="Saiba Mais" to="/perfil">
+        <S.Button type="link" title="Saiba Mais" to="/perfil">
           Saiba Mais
-        </Buttons>
+        </S.Button>
       </S.Content>
     </S.Card>
   );

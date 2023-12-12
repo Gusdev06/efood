@@ -13,7 +13,7 @@ export const DivLogo = styled.div`
 `;
 
 export const Container = styled.div`
-  padding-top: 64px;
+  padding-top: 40px;
   max-width: 480px;
   margin: 0 auto;
   width: 100%;
@@ -39,4 +39,8 @@ export const Description = styled.div`
   color: ${cores.rosa};
   font-size: 10px;
   text-align: center;
+
+  p {
+    padding-bottom: 40px;
+  }
 `;

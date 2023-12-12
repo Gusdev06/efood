@@ -7,7 +7,7 @@ export const Card = styled.div`
   height: 338px;
   border: 1px solid ${cores.rosa};
   position: relative;
-  border-radius: 8px;
+
   background-color: ${cores.rosa};
   margin-bottom: 32px;
   img {

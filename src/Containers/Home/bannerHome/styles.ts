@@ -19,7 +19,7 @@ export const Container = styled.div`
 export const Tittle = styled.h1`
   color: ${cores.rosa};
   max-width: 539px;
-  font-weight: bold;
+  font-weight: 100;
 `;
 
 export const DivTittle = styled.div`

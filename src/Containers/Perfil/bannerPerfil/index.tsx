@@ -1,15 +1,17 @@
 import banner from "../../../assets/fundo.png";
-import { Category, DivTittle, Imagem, Tittle } from "./styles";
+import { Category, Container, DivTittle, Imagem, Tittle } from "./styles";
 
 const BannerPerfil = () => {
   return (
     <Imagem style={{ backgroundImage: `url(${banner})` }}>
-      <div className="container">
+      <Container className="container">
         <DivTittle>
           <Category>Italiana</Category>
+        </DivTittle>
+        <DivTittle>
           <Tittle>La Dolce Vita Trattoria</Tittle>
         </DivTittle>
-      </div>
+      </Container>
     </Imagem>
   );
 };

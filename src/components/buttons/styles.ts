@@ -17,6 +17,7 @@ export const ButtonLINK = styled(Link)`
   color: ${cores.branca};
   font-size: 14px;
   padding: 4px 6px;
+
   font-weight: bold;
   border: none;
 `;

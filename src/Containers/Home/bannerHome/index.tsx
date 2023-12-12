@@ -13,7 +13,7 @@ export const BannerHome = () => {
           </DivLogo>
           <DivTittle>
             <Tittle>
-              Viva experiências gastronômicas no conforto da sua casa
+              Viva experiências gastronômicas no conforto da sua casa
             </Tittle>
           </DivTittle>
         </Container>
