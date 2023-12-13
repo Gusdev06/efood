@@ -1,11 +1,11 @@
 import PratosList from "../../Containers/Perfil/PratosList";
+import BannerDish from "../../Containers/Perfil/bannerDish";
 import BannerPerfil from "../../Containers/Perfil/bannerPerfil";
 import Cart from "../../Containers/Perfil/carrinho";
 import Checkout from "../../Containers/Perfil/checkout";
 import Payment from "../../Containers/Perfil/payments";
 import Success from "../../Containers/Perfil/success";
 import pizza from "../../assets/pizza.png";
-import { Banner } from "../../components/Banner";
 import { PratosModel } from "../../models";
 
 const pratos: PratosModel[] = [
@@ -62,8 +62,8 @@ const pratos: PratosModel[] = [
 const Perfil = () => {
   return (
     <>
-      <Banner />
       <BannerPerfil />
+      <BannerDish />
       <PratosList pratos={pratos} />
       <Cart />
       <Checkout />

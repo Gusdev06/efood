@@ -1,5 +1,4 @@
 import estrela from "../../../assets/estrela.svg";
-import { Tag } from "../tags";
 import * as S from "./styles";
 
 type Props = {
@@ -20,19 +19,19 @@ const Restaurantes = ({
   return (
     <S.Card>
       <img src={image} alt="" />
+      <S.TagContainer>
+        {infos.map((info, index) => (
+          <S.Tag key={index}>{info}</S.Tag>
+        ))}
+      </S.TagContainer>
       <S.Content>
-        <S.DivInfos>
-          {infos.map((info, index) => (
-            <Tag key={index}>{info}</Tag>
-          ))}
-        </S.DivInfos>
-        <S.DivTittle>
-          <S.Tittle>{name}</S.Tittle>
-          <S.Avaliation>
-            <span>{avaliation}</span>
-            <img src={estrela} alt="" />
-          </S.Avaliation>
-        </S.DivTittle>
+        <S.TitleRating>
+          <h2>{name}</h2>
+          <S.ContainerRating>
+            <S.Rating>{avaliation}</S.Rating>
+            <img src={estrela} alt="estrela" />
+          </S.ContainerRating>
+        </S.TitleRating>
         <S.Description>{description}</S.Description>
         <S.Button type="link" title="Saiba Mais" to="/perfil">
           Saiba Mais

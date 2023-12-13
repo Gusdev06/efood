@@ -1,32 +1,22 @@
-import { styled } from "styled-components";
-import { cores } from "../../../styles";
+import styled from "styled-components";
 
-export const Imagem = styled.div`
-  max-width: 100%;
-  height: 384px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 32px 0;
-  font-weight: 100;
-`;
-
-export const Tittle = styled.h1`
-  color: ${cores.branca};
+export const HeaderProfile = styled.header`
   font-weight: bold;
-  font-size: 32px;
+
+  p:last-child {
+    cursor: pointer;
+  }
 `;
 
-export const DivTittle = styled.div``;
-
-export const Category = styled(Tittle)`
-  font-weight: 100;
-  font-style: italic;
+export const LogoHeader = styled.img`
+  height: 57px;
 `;
 
 export const Container = styled.div`
+  max-width: 1024px;
+  height: 186px;
   display: flex;
-  flex-direction: column;
+  margin: 0 auto;
   justify-content: space-between;
-  height: 100%;
-  width: 100%;
+  align-items: center;
 `;

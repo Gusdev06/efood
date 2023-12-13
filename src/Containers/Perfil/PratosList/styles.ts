@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 export const List = styled.ul`
-  margin-top: 60px;
-  padding-top: 80px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding-bottom: 120px;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 32px;
+  margin-bottom: 120px;
 `;

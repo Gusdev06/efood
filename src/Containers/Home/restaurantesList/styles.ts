@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export const List = styled.ul`
-  padding-top: 80px;
-  padding-bottom: 120px;
+export const ContainerProducts = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
+  column-gap: 80px;
+  margin-bottom: 120px;
 `;

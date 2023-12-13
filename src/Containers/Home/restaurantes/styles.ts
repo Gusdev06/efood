@@ -1,55 +1,67 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { Buttons } from "../../../components/buttons";
 import { cores } from "../../../styles";
 
 export const Card = styled.div`
-  margin-top: 48px;
-  margin-right: 80px;
-  max-width: 472px;
-  width: 100%;
-  height: 398px;
-  border: 1px solid ${cores.rosa};
+  background-color: ${cores.branca};
+  margin-top: 80px;
   position: relative;
+  border: 1px solid ${cores.rosa};
+
+  > img {
+    width: 100%;
+    height: 217px;
+    object-fit: cover;
+  }
 `;
 
-export const Button = styled(Buttons)`
-  margin-top: 16px;
-`;
-
-export const Avaliation = styled.div`
-  display: flex;
-  align-items: center;
-  color: ${cores.rosa};
-  font-weight: bold;
-  font-size: 18px;
-  gap: 8px;
-`;
-
-export const DivTittle = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 16px;
-`;
-
-export const Tittle = styled.h3`
-  color: ${cores.rosa};
-  font-size: 18px;
-  font-weight: bold;
-`;
-
-export const DivInfos = styled.div`
+export const TagContainer = styled.div`
   position: absolute;
   top: 16px;
-  right: 14px;
-`;
-
-export const Description = styled.p`
-  color: ${cores.rosa};
-  font-size: 14px;
-  line-height: 22px;
-  padding-bottom: 12px;
+  right: 16px;
+  display: flex;
+  gap: 8px;
 `;
 
 export const Content = styled.div`
   padding: 8px;
+`;
+export const TitleRating = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+`;
+export const ContainerRating = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+`;
+export const Rating = styled.span`
+  font-size: 18px;
+  font-weight: bold;
+`;
+export const Description = styled.p`
+  font-size: 14px;
+  line-height: 22px;
+  margin: 16px 0;
+`;
+
+export const Button = styled(Link)`
+  background-color: ${cores.rosa};
+  color: ${cores.bege};
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px 6px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+`;
+export const Tag = styled.span`
+  background-color: ${cores.rosa};
+  color: ${cores.bege};
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px 6px;
+  border: none;
 `;

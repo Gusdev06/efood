@@ -1,6 +1,6 @@
 import hioki from "../../assets/hioko.png";
 import ladoce from "../../assets/ladolce.png";
-import { BannerHome } from "../../Containers/Home/bannerHome";
+import BannerHome from "../../Containers/Home/bannerHome";
 import RestaurantesList from "../../Containers/Home/restaurantesList";
 import { RestaurantesModel } from "../../models";
 
@@ -65,8 +65,9 @@ const Home = () => {
   return (
     <>
       <BannerHome />
-
-      <RestaurantesList restaurantes={restaurantes}></RestaurantesList>
+      <div className="container">
+        <RestaurantesList restaurantes={restaurantes}></RestaurantesList>
+      </div>
     </>
   );
 };

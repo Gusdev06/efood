@@ -3,7 +3,7 @@ import styled, { createGlobalStyle, keyframes } from "styled-components";
 export const cores = {
   cinza: "#333",
   rosa: "#E66767",
-  branca: "#EEEEEE",
+  branca: "#FFF8F2",
   verde: "#10AC84",
   cinzaClaro: "#A3A3A3",
   bege: "#FFEBD9",
@@ -14,23 +14,17 @@ export const GlobalStyle = createGlobalStyle`
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    list-style: none;
-    
-    text-decoration: none;
-
-    html, body, #root {
-    height: 100%;
-}
-}
+    box-sizing: border-box;
+  }
 
 
 
-body {
-    background: #FFF8F2;
-   
-}
+
+  body{
+    background-color: ${cores.branca};
+    color: ${cores.rosa};
+  }
 
 .container {
     max-width: 1024px;

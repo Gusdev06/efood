@@ -1,30 +1,22 @@
-import { styled } from "styled-components";
-import { cores } from "../../../styles";
+import styled from "styled-components";
 
-export const Imagem = styled.div`
+export const FundoHeader = styled.div`
   width: 100%;
   height: 384px;
+  display: block;
 `;
 
-export const DivLogo = styled.div`
-  display: flex;
-  justify-content: center;
+export const Logo = styled.img`
+  margin: 0 auto;
+  display: block;
+  padding: 64px 0 138.5px;
 `;
 
-export const Container = styled.div`
-  padding-top: 64px;
-  padding-bottom: 4px;
-`;
-
-export const Tittle = styled.h1`
-  color: ${cores.rosa};
-  max-width: 539px;
-  font-weight: 100;
-`;
-
-export const DivTittle = styled.div`
-  padding-top: 138px;
-  display: flex;
-  justify-content: center;
+export const Title = styled.h1`
+  font-size: 36px;
+  font-weight: bold;
+  width: 539px;
+  line-height: 42px;
   text-align: center;
+  margin: 0 auto;
 `;

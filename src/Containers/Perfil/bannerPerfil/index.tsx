@@ -1,18 +1,15 @@
-import banner from "../../../assets/fundo.png";
-import { Category, Container, DivTittle, Imagem, Tittle } from "./styles";
-
+import banner from "../../../assets/Vector.png";
+import logo from "../../../assets/logo.svg";
+import * as S from "./styles";
 const BannerPerfil = () => {
   return (
-    <Imagem style={{ backgroundImage: `url(${banner})` }}>
-      <Container className="container">
-        <DivTittle>
-          <Category>Italiana</Category>
-        </DivTittle>
-        <DivTittle>
-          <Tittle>La Dolce Vita Trattoria</Tittle>
-        </DivTittle>
-      </Container>
-    </Imagem>
+    <S.HeaderProfile style={{ backgroundImage: `url(${banner})` }}>
+      <S.Container>
+        <p>Restaurantes</p>
+        <S.LogoHeader src={logo} alt="efood" />
+        <p>0 Produto(S) no carrinho</p>
+      </S.Container>
+    </S.HeaderProfile>
   );
 };
 

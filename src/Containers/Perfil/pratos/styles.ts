@@ -3,15 +3,37 @@ import styled from "styled-components";
 import { cores } from "../../../styles";
 
 export const Card = styled.div`
-  max-width: 320px;
-  height: 338px;
-  border: 1px solid ${cores.rosa};
+  background-color: ${cores.rosa};
+  padding: 8px;
+  width: 320px;
+  color: ${cores.bege};
+  margin-bottom: 32px;
   position: relative;
 
-  background-color: ${cores.rosa};
-  margin-bottom: 32px;
-  img {
-    padding: 8px;
+  > img {
+    width: 100%;
+    height: 167px;
+    object-fit: cover;
+  }
+
+  h3 {
+    margin: 8px 0;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 8px;
+  }
+
+  button {
+    width: 100%;
+    background-color: ${cores.bege};
+    border: none;
+    color: ${cores.rosa};
+    font-weight: bold;
+    padding: 4px 0;
+    cursor: pointer;
   }
 `;
 

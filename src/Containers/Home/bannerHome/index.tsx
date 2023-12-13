@@ -1,23 +1,17 @@
-import { Container, DivLogo, DivTittle, Imagem, Tittle } from "./styles";
+import { Link } from "react-router-dom";
 
-import banner from "../../../assets/Vector.png";
+import fundo from "../../../assets/Vector.png";
 import logo from "../../../assets/logo.svg";
 
-export const BannerHome = () => {
-  return (
-    <Imagem style={{ backgroundImage: `url(${banner})` }}>
-      <div className="container">
-        <Container>
-          <DivLogo>
-            <img src={logo} alt="" />
-          </DivLogo>
-          <DivTittle>
-            <Tittle>
-              Viva experiências gastronômicas no conforto da sua casa
-            </Tittle>
-          </DivTittle>
-        </Container>
-      </div>
-    </Imagem>
-  );
-};
+import * as S from "./styles";
+
+const BannerHome = () => (
+  <S.FundoHeader style={{ backgroundImage: `url(${fundo})` }}>
+    <Link to={"/"}>
+      <S.Logo src={logo} alt="efood" />
+    </Link>
+    <S.Title>Viva experiências gastronômicas no conforto da sua casa</S.Title>
+  </S.FundoHeader>
+);
+
+export default BannerHome;

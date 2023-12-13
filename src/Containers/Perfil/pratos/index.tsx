@@ -38,14 +38,11 @@ const Pratos = ({ pratos }: PratosProps) => {
     <>
       <S.Card onClick={handleOpenModal}>
         <img src={image} alt="" />
-        <S.Content>
-          <S.DivTittle>
-            <S.Tittle>{name}</S.Tittle>
-          </S.DivTittle>
-          <S.Description>{description}</S.Description>
-          <S.Button onClick={handleOpenModal}>Adicionar ao carrinho</S.Button>
-        </S.Content>
+        <h3>{name}</h3>
+        <p>{description}</p>
+        <button onClick={handleOpenModal}>Adicionar ao carrinho</button>
       </S.Card>
+
       <S.ModalStyle
         isOpen={modalIsOpen}
         onRequestClose={handleCloseModal}
@@ -67,10 +64,8 @@ const Pratos = ({ pratos }: PratosProps) => {
             ocasião.
           </S.DescriptionModal>
           Serve: de 2 a 3 pessoas
-          <S.ButtonModal onClick={handleOpenModal}>
-            <S.Button onClick={addToCart}>
-              Adicionar ao carrinho - R$ {price}
-            </S.Button>
+          <S.ButtonModal onClick={addToCart}>
+            Adicionar ao carrinho - R$ {price}
           </S.ButtonModal>
         </S.ContentModal>
         <S.ButtonClose onClick={handleCloseModal}>X</S.ButtonClose>
