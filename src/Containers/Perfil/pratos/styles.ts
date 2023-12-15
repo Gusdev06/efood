@@ -17,6 +17,7 @@ export const Card = styled.div`
   }
 
   h3 {
+    font-size: 16px;
     margin: 8px 0;
   }
 
@@ -32,6 +33,7 @@ export const Card = styled.div`
     border: none;
     color: ${cores.rosa};
     font-weight: bold;
+    font-size: 14px;
     padding: 4px 0;
     cursor: pointer;
   }

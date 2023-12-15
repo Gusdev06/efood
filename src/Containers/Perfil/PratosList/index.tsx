@@ -1,17 +1,17 @@
-import { PratosModel } from "../../../models";
+import { ICardapio } from "../../../context/restaurantesContext";
 import Pratos from "../pratos";
 import * as S from "./styles";
 
 type Props = {
-  pratos: PratosModel[];
+  cardapio: ICardapio[];
 };
 
-const PratosList = ({ pratos }: Props) => {
+const PratosList = ({ cardapio }: Props) => {
   return (
     <div className="container">
       <S.List>
-        {pratos.map((prato) => {
-          return <Pratos pratos={prato}></Pratos>;
+        {cardapio.map((item) => {
+          return <Pratos cardapio={item} key={item.id} />;
         })}
       </S.List>
     </div>

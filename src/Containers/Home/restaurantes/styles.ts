@@ -4,7 +4,7 @@ import { cores } from "../../../styles";
 
 export const Card = styled.div`
   background-color: ${cores.branca};
-  margin-top: 80px;
+  margin-top: 48px;
   position: relative;
   border: 1px solid ${cores.rosa};
 
@@ -30,7 +30,11 @@ export const TitleRating = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 8px;
+
+  h2 {
+    font-size: 18px;
+    font-weight: bold;
+  }
 `;
 export const ContainerRating = styled.div`
   display: flex;

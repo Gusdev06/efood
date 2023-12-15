@@ -37,10 +37,10 @@ const Cart = () => {
             <ul>
               {pratos.map((prato) => (
                 <S.CartItem key={prato.id}>
-                  <img src={prato.image} alt={prato.name} />
+                  <img src={prato.foto} alt={prato.nome} />
                   <div>
-                    <h3>{prato.name}</h3>
-                    <span>{formatPrice(prato.price)}</span>
+                    <h3>{prato.nome}</h3>
+                    <span>{formatPrice(prato.preco)}</span>
                   </div>
                   <img
                     src={trash}

@@ -1,8 +1,8 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { PratosModel } from "../../models";
+import { ICardapio } from "../../context/restaurantesContext";
 
 type CartState = {
-  pratos: PratosModel[];
+  pratos: ICardapio[];
   isOpen: boolean;
 };
 
@@ -15,7 +15,7 @@ const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    add: (state, action: PayloadAction<PratosModel>) => {
+    add: (state, action: PayloadAction<ICardapio>) => {
       const prato = state.pratos.find(
         (prato) => prato.id === action.payload.id
       );

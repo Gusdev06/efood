@@ -3,17 +3,16 @@ import { add, openCart } from "../../../store/reducers/cart";
 import * as S from "./styles";
 
 import { useDispatch } from "react-redux";
-import { PratosModel } from "../../../models";
+import { ICardapio } from "../../../context/restaurantesContext";
+import { FormatDescription } from "../../../utils";
 
 type PratosProps = {
-  pratos: PratosModel;
+  cardapio: ICardapio;
 };
 
-const Pratos = ({ pratos }: PratosProps) => {
+const Pratos = ({ cardapio }: PratosProps) => {
   const dispatch = useDispatch();
   const [modalIsOpen, setModalIsOpen] = useState(false);
-
-  const { name, description, image, price } = pratos;
 
   const handleOpenModal = () => {
     setModalIsOpen(true);
@@ -25,7 +24,7 @@ const Pratos = ({ pratos }: PratosProps) => {
 
   const addToCart = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.stopPropagation();
-    dispatch(add(pratos));
+    dispatch(add(cardapio));
     handleCloseModal();
     OpenCart();
   };
@@ -37,9 +36,9 @@ const Pratos = ({ pratos }: PratosProps) => {
   return (
     <>
       <S.Card onClick={handleOpenModal}>
-        <img src={image} alt="" />
-        <h3>{name}</h3>
-        <p>{description}</p>
+        <img src={cardapio.foto} alt="" />
+        <h3>{cardapio.nome}</h3>
+        <p>{FormatDescription(cardapio.descricao)}</p>
         <button onClick={handleOpenModal}>Adicionar ao carrinho</button>
       </S.Card>
 
@@ -48,24 +47,13 @@ const Pratos = ({ pratos }: PratosProps) => {
         onRequestClose={handleCloseModal}
         overlayClassName="overlay"
       >
-        <img src={image} alt="" />
+        <img src={cardapio.foto} alt="" />
         <S.ContentModal>
-          <h3>{name}</h3>
-          <S.DescriptionModal>
-            A pizza Margherita é uma pizza clássica da culinária italiana,
-            reconhecida por sua simplicidade e sabor inigualável. Ela é feita
-            com uma base de massa fina e crocante, coberta com molho de tomate
-            fresco, queijo mussarela de alta qualidade, manjericão fresco e
-            azeite de oliva extra-virgem. A combinação de sabores é perfeita,
-            com o molho de tomate suculento e ligeiramente ácido, o queijo
-            derretido e cremoso e as folhas de manjericão frescas, que adicionam
-            um toque de sabor herbáceo. É uma pizza simples, mas deliciosa, que
-            agrada a todos os paladares e é uma ótima opção para qualquer
-            ocasião.
-          </S.DescriptionModal>
+          <h3>{cardapio.nome}</h3>
+          <S.DescriptionModal>{cardapio.descricao}</S.DescriptionModal>
           Serve: de 2 a 3 pessoas
           <S.ButtonModal onClick={addToCart}>
-            Adicionar ao carrinho - R$ {price}
+            Adicionar ao carrinho - R$ {cardapio.preco}
           </S.ButtonModal>
         </S.ContentModal>
         <S.ButtonClose onClick={handleCloseModal}>X</S.ButtonClose>

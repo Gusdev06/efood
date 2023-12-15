@@ -7,6 +7,7 @@ type Props = {
   image: string;
   avaliation: number;
   infos: string[];
+  id: number;
 };
 
 const Restaurantes = ({
@@ -15,6 +16,7 @@ const Restaurantes = ({
   name,
   image,
   infos,
+  id,
 }: Props) => {
   return (
     <S.Card>
@@ -33,7 +35,7 @@ const Restaurantes = ({
           </S.ContainerRating>
         </S.TitleRating>
         <S.Description>{description}</S.Description>
-        <S.Button type="link" title="Saiba Mais" to="/perfil">
+        <S.Button type="link" title="Saiba Mais" to={`/perfil/${id}`}>
           Saiba Mais
         </S.Button>
       </S.Content>

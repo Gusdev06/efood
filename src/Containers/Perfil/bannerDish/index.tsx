@@ -1,12 +1,17 @@
-import fundo from "../../../assets/fundo.png";
 import * as S from "./styles";
 
-const BannerDish = () => {
+type Props = {
+  name: string;
+  type: string;
+  background: string;
+};
+
+const BannerDish = ({ name, type, background }: Props) => {
   return (
-    <S.Banner style={{ backgroundImage: `url(${fundo})` }}>
+    <S.Banner style={{ backgroundImage: `url(${background})` }}>
       <div className="container">
-        <S.TipoPrato>Italiana</S.TipoPrato>
-        <S.NomePrato>La Dolce Vita Trattoria</S.NomePrato>
+        <S.TipoPrato>{type}</S.TipoPrato>
+        <S.NomePrato>{name}</S.NomePrato>
       </div>
     </S.Banner>
   );

@@ -1,4 +1,4 @@
-import { PratosModel } from "../models";
+import { ICardapio } from "../context/restaurantesContext";
 
 export const formatPrice = (amount = 0) => {
   return new Intl.NumberFormat("pt-BR", {
@@ -7,8 +7,13 @@ export const formatPrice = (amount = 0) => {
   }).format(amount);
 };
 
-export const getTotalPrice = (pratos: PratosModel[]) => {
+export const getTotalPrice = (pratos: ICardapio[]) => {
   return pratos.reduce((acumulator, currentPrice) => {
-    return (acumulator += currentPrice.price);
+    return (acumulator += currentPrice.preco);
   }, 0);
+};
+
+export const FormatDescription = (description: string) => {
+  if (description.length > 104) return description.slice(0, 104) + "...";
+  return description;
 };
