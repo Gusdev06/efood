@@ -1,19 +1,27 @@
-import { useContext } from "react";
-import BannerHome from "../../Containers/Home/bannerHome";
-import RestaurantesList from "../../Containers/Home/restaurantesList";
-import RestaurantContext from "../../context/restaurantesContext";
+import RestaurantList from '../../components/RestaurantsList'
+import Header from '../../components/Header'
+import { useGetRestaurantsQuery } from '../../services/api'
 
 const Home = () => {
-  const { restaurantes } = useContext(RestaurantContext);
+  const { data: restaurantes } = useGetRestaurantsQuery()
+
+  if (restaurantes) {
+    return (
+      <>
+        <Header />
+        <div className="container">
+          <RestaurantList restaurants={restaurantes} />
+        </div>
+      </>
+    )
+  }
 
   return (
     <>
-      <BannerHome />
-      <div className="container">
-        <RestaurantesList restaurantes={restaurantes}></RestaurantesList>
-      </div>
+      <Header />
+      <h3>Carregando...</h3>
     </>
-  );
-};
+  )
+}
 
-export { Home };
+export default Home
